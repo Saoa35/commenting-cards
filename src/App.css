@@ -5,7 +5,7 @@
 .wrap {
   position: relative;
   max-width: 1200px;
-  margin: 140px auto 0;
+  margin: 50px auto 0;
 }
 
 .card {
@@ -82,9 +82,10 @@ button {
   box-sizing: padding-box;
 }
 
-button hover {
+button:hover {
   border-color: #125688;
   outline: 0;
+  cursor: pointer;
 }
 
 input {
