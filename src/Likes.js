@@ -4,7 +4,7 @@ function Likes(props) {
   console.log(props);
   return (
     <div className="button-controls">
-      <button>❤ {props.likes}</button>
+      <button onClick={props.onIncrementLikes}>❤ {props.likes}</button>
       <button>Dislike</button>
     </div>
   );
@@ -26,4 +26,4 @@ function mapDispatchToProps(dispatch) {
   };
 }
 
-export default connect(mapStateToProps)(Likes);
+export default connect(mapStateToProps, mapDispatchToProps)(Likes);
