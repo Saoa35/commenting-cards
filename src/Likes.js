@@ -18,4 +18,12 @@ function mapStateToProps(state) {
   };
 }
 
+function mapDispatchToProps(dispatch) {
+  return {
+    onIncrementLikes: () => {
+      console.log("click");
+    },
+  };
+}
+
 export default connect(mapStateToProps)(Likes);
