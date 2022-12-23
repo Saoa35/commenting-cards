@@ -22,6 +22,8 @@ function mapDispatchToProps(dispatch) {
   return {
     onIncrementLikes: () => {
       console.log("click");
+      const action = { type: "INCREMENT" };
+      dispatch(action);
     },
   };
 }

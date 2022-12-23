@@ -9,13 +9,11 @@ const reducer = (state = initialState, action) => {
 
   switch (action.type) {
     case "INCREMENT":
-      break;
+      return { ...state, likes: state.likes + 1 };
 
     default:
-      break;
+      return state;
   }
-
-  return state;
 };
 
 const store = createStore(reducer);
