@@ -7,6 +7,14 @@ const initialState = {
 const reducer = (state = initialState, action) => {
   console.log("reducer >", action);
 
+  switch (action.type) {
+    case "INCREMENT":
+      break;
+
+    default:
+      break;
+  }
+
   return state;
 };
 
