@@ -11,23 +11,21 @@ function Likes(props) {
 }
 
 function mapStateToProps(state) {
-  console.log("mapStateToProps > ", state);
+  const { likesReducer } = state;
 
   return {
-    likes: state.likes,
+    likes: likesReducer.likes,
   };
 }
 
 function mapDispatchToProps(dispatch) {
   return {
     onIncrementLikes: () => {
-      // console.log("click");
       const action = { type: "INCREMENT" };
       dispatch(action);
     },
 
     onDicrementLikes: () => {
-      // console.log("click");
       const action = { type: "DECREMENT" };
       dispatch(action);
     },
