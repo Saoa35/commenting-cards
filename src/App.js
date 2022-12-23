@@ -1,6 +1,5 @@
 import "./App.css";
 import Likes from "./Likes";
-import store from "./redux/store";
 
 function App() {
   return (
@@ -12,7 +11,7 @@ function App() {
               src="https://images.pexels.com/photos/5943844/pexels-photo-5943844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
               alt="Skydiving"
             />
-            <Likes store={store} />
+            <Likes />
           </div>
         </div>
       </div>
