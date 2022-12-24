@@ -3,7 +3,7 @@ function Comments(props) {
     <div className="card-comments">
       <form className="comments-item-create">
         <input className="text" />
-        <input className="submit" />
+        <input className="submit" hidden />
       </form>
     </div>
   );
