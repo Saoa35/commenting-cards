@@ -4,8 +4,9 @@ import { inputText } from "./redux/actions";
 function Title(props) {
   console.log("props title >", props);
 
-  const title = useSelector((state) => {
-    console.log("state >>", state);
+  const text = useSelector((state) => {
+    const { inputReducer } = state;
+    return inputReducer.text;
   });
 
   const dispatch = useDispatch();
@@ -23,6 +24,7 @@ function Title(props) {
           placeholder="Enter photo name"
         />
       </div>
+      <p>{text}</p>
     </div>
   );
 }
