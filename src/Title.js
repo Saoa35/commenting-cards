@@ -1,13 +1,16 @@
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { inputText } from "./redux/actions";
 
 function Title(props) {
   console.log("props title >", props);
 
+  const title = useSelector((state) => {
+    console.log("state >>", state);
+  });
+
   const dispatch = useDispatch();
 
   const handleChange = (e) => {
-    // console.log("handle text >>", e.target.value);
     dispatch(inputText(e.target.value));
   };
 
