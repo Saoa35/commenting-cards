@@ -8,7 +8,11 @@ function Title(props) {
   return (
     <div className="card-title">
       <div className="card-title-top">
-        <input type="text" onChange={handleChange} />
+        <input
+          type="text"
+          onChange={handleChange}
+          placeholder="Enter photo name"
+        />
       </div>
     </div>
   );
