@@ -1,11 +1,16 @@
 import { useState } from "react";
 import SingleComment from "./SingleComment";
 import { commentCreate } from "./redux/actions";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import uniqid from "uniqid";
 
 function Comments(props) {
   const [textComment, setTextComment] = useState("");
 
+  const comments = useSelector((state) => {
+    const { commentsReducer } = state;
+    return commentsReducer.comments;
+  });
   const dispatch = useDispatch();
 
   const handleInput = (e) => {
@@ -14,7 +19,8 @@ function Comments(props) {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log(textComment);
+    const id = uniqid();
+    dispatch(commentCreate(textComment, id));
   };
 
   return (
@@ -23,7 +29,10 @@ function Comments(props) {
         <input className="text" value={textComment} onChange={handleInput} />
         <input className="submit" hidden />
       </form>
-      <SingleComment />
+      {comments.length &&
+        comments.map((res) => {
+          return <SingleComment key={res.id} data={res} />;
+        })}
     </div>
   );
 }

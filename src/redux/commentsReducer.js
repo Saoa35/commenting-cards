@@ -5,13 +5,11 @@ const initialState = {
 };
 
 export const commentsReducer = (state = initialState, action) => {
-  console.log("input text Reducer >", action);
+  switch (action.type) {
+    case COMMENT_CREATE:
+      return { ...state, comments: [...state.comments, action.data] };
 
-  //   switch (action.type) {
-  //     case COMMENT_CREATE:
-  //       return { ...state, text: action.text };
-
-  //     default:
-  return state;
-  //   }
+    default:
+      return state;
+  }
 };
