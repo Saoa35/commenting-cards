@@ -1,9 +1,12 @@
 import { useState } from "react";
 import SingleComment from "./SingleComment";
 import { commentCreate } from "./redux/actions";
+import { useDispatch } from "react-redux";
 
 function Comments(props) {
   const [textComment, setTextComment] = useState("");
+
+  const dispatch = useDispatch();
 
   const handleInput = (e) => {
     setTextComment(e.target.value);
