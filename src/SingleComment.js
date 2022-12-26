@@ -1,8 +1,14 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 function SingleComment({ data }) {
   const [commentText, setCommentText] = useState("");
   const { text, id } = data;
+
+  useEffect(() => {
+    if (text) {
+      setCommentText(text);
+    }
+  }, [text]);
 
   return (
     <form className="comments-item">
