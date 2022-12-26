@@ -29,7 +29,7 @@ function Comments(props) {
         <input className="text" value={textComment} onChange={handleInput} />
         <input className="submit" hidden />
       </form>
-      {comments.length &&
+      {!!comments.length &&
         comments.map((res) => {
           return <SingleComment key={res.id} data={res} />;
         })}

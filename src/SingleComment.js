@@ -1,4 +1,5 @@
-function SingleComment(props) {
+function SingleComment({ data }) {
+  const { text, id } = data;
   return (
     <form className="comments-item">
       <div className="comments-item-delete">&times;</div>
