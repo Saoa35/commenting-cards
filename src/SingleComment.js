@@ -13,7 +13,7 @@ function SingleComment({ data }) {
   return (
     <form className="comments-item">
       <div className="comments-item-delete">&times;</div>
-      <input className="text" />
+      <input className="text" value={commentText} />
       <input className="submit" hidden />
     </form>
   );
