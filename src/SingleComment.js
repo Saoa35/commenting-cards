@@ -14,8 +14,12 @@ function SingleComment({ data }) {
     setCommentText(e.target.value);
   };
 
+  const handleUpdate = (e) => {
+    e.preventDefault();
+  };
+
   return (
-    <form className="comments-item">
+    <form onSubmit={handleUpdate} className="comments-item">
       <div className="comments-item-delete">&times;</div>
       <input className="text" value={commentText} onChange={handleInput} />
       <input className="submit" hidden />
