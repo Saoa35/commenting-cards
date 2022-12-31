@@ -10,6 +10,10 @@ export const commentsReducer = (state = initialState, action) => {
       return { ...state, comments: [...state.comments, action.data] };
 
     case COMMENT_UPDATE:
+      const { data } = action;
+      const { comments } = state;
+      const itemIndex = comments.findIndex((res) => res.id === data.id);
+
       return { ...state };
 
     default:
