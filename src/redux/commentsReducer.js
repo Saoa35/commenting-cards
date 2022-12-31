@@ -13,6 +13,11 @@ export const commentsReducer = (state = initialState, action) => {
       const { data } = action;
       const { comments } = state;
       const itemIndex = comments.findIndex((res) => res.id === data.id);
+      const nextComments = [
+        ...comments.slice(0, itemIndex),
+        data,
+        ...comments.slice(itemIndex + 1),
+      ];
 
       return { ...state };
 
