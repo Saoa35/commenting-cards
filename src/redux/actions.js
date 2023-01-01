@@ -40,9 +40,9 @@ export function commentUpdate(text, id) {
   };
 }
 
-export function commentUpdate(text, id) {
+export function commentDelete(id) {
   return {
     type: COMMENT_DELETE,
-    data: { text, id },
+    id,
   };
 }
