@@ -19,7 +19,7 @@ export const commentsReducer = (state = initialState, action) => {
         ...comments.slice(itemIndex + 1),
       ];
 
-      return { ...state };
+      return { ...state, comments: nextComments };
 
     default:
       return state;

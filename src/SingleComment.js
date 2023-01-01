@@ -22,9 +22,15 @@ function SingleComment({ data }) {
     dispatch(commentUpdate(commentText, id));
   };
 
+  const handleDelete = (e) => {
+    e.preventDefault();
+  };
+
   return (
     <form onSubmit={handleUpdate} className="comments-item">
-      <div className="comments-item-delete">&times;</div>
+      <div onClick={handleDelete} className="comments-item-delete">
+        &times;
+      </div>
       <input className="text" value={commentText} onChange={handleInput} />
       <input className="submit" hidden />
     </form>
