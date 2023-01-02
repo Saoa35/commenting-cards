@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useDispatch } from "react-redux";
-import { commentUpdate } from "./redux/actions";
+import { commentDelete, commentUpdate } from "./redux/actions";
 
 function SingleComment({ data }) {
   const [commentText, setCommentText] = useState("");
@@ -24,6 +24,7 @@ function SingleComment({ data }) {
 
   const handleDelete = (e) => {
     e.preventDefault();
+    dispatch(commentDelete(id));
   };
 
   return (
