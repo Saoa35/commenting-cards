@@ -46,3 +46,14 @@ export function commentDelete(id) {
     id,
   };
 }
+
+export function commentsLoad() {
+  return async (dispatch) => {
+    const response = fetch(
+      "https://jsonplaceholder.typicode.com/comments?_limit=10"
+    );
+    const jsonData = await response.json();
+  };
+}
+
+("COMMENTS_LOAD");
