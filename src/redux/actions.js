@@ -5,6 +5,7 @@ import {
   COMMENT_CREATE,
   COMMENT_UPDATE,
   COMMENT_DELETE,
+  COMMENTS_LOAD,
 } from "./types";
 
 export function incrementLikes() {
@@ -53,7 +54,9 @@ export function commentsLoad() {
       "https://jsonplaceholder.typicode.com/comments?_limit=10"
     );
     const jsonData = await response.json();
+    dispatch({
+      type: COMMENTS_LOAD,
+      data: jsonData,
+    });
   };
 }
-
-("COMMENTS_LOAD");
