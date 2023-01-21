@@ -48,7 +48,7 @@ export const commentsReducer = (state = initialState, action) => {
       });
       return {
         ...state,
-        comments: [...state.comments, action.data],
+        comments: commentsNew,
       };
 
     default:
