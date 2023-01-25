@@ -16,5 +16,8 @@ export const appReducer = (state = initialState, action) => {
         ...state,
         loading: false,
       };
+
+    default:
+      return state;
   }
 };
