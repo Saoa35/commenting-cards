@@ -4,12 +4,14 @@ const Spin = (props) => {
   return (
     <div className="loader-styles">
       <Loader
-        type="Puff"
+        type="TailSpin"
         color="#00BFFF"
         height={100}
         width={100}
-        timeout={3000}
+        visible={false}
       />
     </div>
   );
 };
+
+export default Spin;
