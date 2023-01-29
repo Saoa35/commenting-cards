@@ -7,6 +7,7 @@ import {
   COMMENT_DELETE,
   COMMENTS_LOAD,
   LOADER_DISPLAY_ON,
+  LOADER_DISPLAY_OF,
 } from "./types";
 
 export function incrementLikes() {
@@ -52,6 +53,12 @@ export function commentDelete(id) {
 export function loaderOn() {
   return {
     type: LOADER_DISPLAY_ON,
+  };
+}
+
+export function loaderOff() {
+  return {
+    type: LOADER_DISPLAY_OF,
   };
 }
 
