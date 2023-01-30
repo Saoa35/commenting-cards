@@ -64,6 +64,7 @@ export function loaderOff() {
 
 export function commentsLoad() {
   return async (dispatch) => {
+    dispatch(loaderOn());
     const response = fetch(
       "https://jsonplaceholder.typicode.com/comments?_limit=10"
     );
