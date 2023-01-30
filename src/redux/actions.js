@@ -73,5 +73,6 @@ export function commentsLoad() {
       type: COMMENTS_LOAD,
       data: jsonData,
     });
+    dispatch(loaderOff());
   };
 }
