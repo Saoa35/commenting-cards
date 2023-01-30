@@ -10,7 +10,7 @@ const Spin = (props) => {
         color="#00BFFF"
         height={100}
         width={100}
-        visible={false}
+        visible={spinner}
       />
     </div>
   );
